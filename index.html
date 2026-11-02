@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Marble Rush</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <div class="stat"><span class="label">SCORE</span><span id="score" class="value">0</span></div>
+      <div id="timer" class="timer">60.0</div>
+      <div class="stat right"><span class="label">GEMS</span><span id="gems" class="value">0</span></div>
+    </div>
+    <div class="hud-bottom">
+      <div class="stat"><span class="label">LIVES</span><span id="lives" class="value">●●●</span></div>
+      <div class="speed">
+        <span class="label">SPEED</span>
+        <div class="bar"><div id="speedbar"></div></div>
+        <span id="speedval" class="value">0</span>
+      </div>
+      <div class="stat right"><span class="label">DISTANCE</span><span id="dist" class="value">0 m</span></div>
+    </div>
+    <div id="msg" class="msg"></div>
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <div id="title" class="overlay">
+    <h1>MARBLE<br>RUSH</h1>
+    <p class="sub">An endless marble track. Tilt the world, keep your speed, don't fall out.</p>
+    <p class="controls">
+      <b>WASD / Arrows</b> tilt the stage &nbsp;·&nbsp; <b>Gamepad</b> left stick &nbsp;·&nbsp; <b>Touch</b> drag anywhere<br>
+      <b>P</b> pause &nbsp;·&nbsp; <b>M</b> mute
+    </p>
+    <p class="press">Press <b>SPACE</b> or tap to start</p>
+    <p id="best" class="best"></p>
+  </div>
+
+  <div id="gameover" class="overlay hidden">
+    <h2 id="go-title">GAME OVER</h2>
+    <div class="results">
+      <div><span>Score</span><b id="go-score">0</b></div>
+      <div><span>Distance</span><b id="go-dist">0 m</b></div>
+      <div><span>Gems</span><b id="go-gems">0</b></div>
+      <div><span>Goals</span><b id="go-goals">0</b></div>
+    </div>
+    <p id="go-best" class="best"></p>
+    <p class="press">Press <b>SPACE</b> or tap to play again</p>
+  </div>
+
+  <div id="pause" class="overlay hidden">
+    <h2>PAUSED</h2>
+    <p class="press">Press <b>P</b> to resume</p>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
